@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: #263238;
+}
+
+
+#wrapper {
+  background: #64B5F6;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#wrapper:before {
+  content: '';
+  background: #E1F5FE;
+  position: absolute;
+  width: 100%;
+  height: 11%;
+  bottom: 50%;
+  left: 0;
+}
+
+#clouds {
+  position: absolute;
+  bottom: 60%;
+  height: 10%;
+}
+
+#clouds path {
+    fill: #E1F5FE;
+    stroke: #E1F5FE;
+}
+
+
+#grass {
+  width: 100%;
+  height: 50%;
+  top: 50%;
+  position: relative;
+  background: linear-gradient(to bottom, #1B5E20, #66BB6A);
+  z-index: 1;
+}
+
+
+#line {
+    position: absolute;
+    top: 30%;
+    left: 10vw;
+    width: 80vw;
+    height: 25%;
+    background: #C0CA33;
+    opacity: .7;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+#goat {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 20%;
+  height: 35%;
+}
+
+#goat.run {
+  animation: jump 1s ease-out 10, run 10s linear 1 forwards;
+}
+
+
+#goat.back {
+  animation: back 3s linear forwards;
+}
+
+
+#goat svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+#path854-9-0, 
+#path854-5,
+#path854-9,
+#path854 {
+  transform-origin: 50% 5%;
+  transform: rotate(0deg);
+}
+
+.run #path854-9-0, 
+.run #path854-5 {
+  animation: arms2 1s ease-out infinite;
+}
+
+.run #path854-9,
+.run #path854 {
+  animation: arms1 1s ease-out infinite;
+}
+
+
+.back #path854-9-0, 
+.back #path854 {
+  animation: arms3 1s linear infinite;
+}
+
+.back #path854-9,
+.back #path854-5 {
+  animation: arms3 1s .5s linear infinite;
+}
+
+
+
+
+
+#controls {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  margin: 10px;
+  padding: 0 10px;
+  height: 2em;
+  border: none;
+  background: #fff;
+}
+
+input[type="button"]:hover {
+  color: #B71C1C;
+}
+
+input[type="button"] {
+  font-family: FontAwesome;
+  width: 2em;  
+}
+input[type="button"]:hover {
+  color: #B71C1C;
+}
+
+#stop, #unstop {
+  display: none;
+}
+
+
+
+@keyframes arms1 {
+  
+ 0% {
+   transform: rotate(0deg);
+  }
+  30% {
+   transform: rotate(50deg);
+  }
+  70% {
+   transform: rotate(-40deg);
+  }
+  100% {
+   transform: rotate(0deg);
+  }
+}
+
+@keyframes arms2 {
+  
+ 0% {
+   transform: rotate(0deg);
+  }
+  20% {
+   transform: rotate(20deg);
+  }
+  50% {
+   transform: rotate(-30deg);
+  }
+  100% {
+   transform: rotate(0deg);
+  }
+}
+
+@keyframes arms3 {
+  
+ 0% {
+   transform: rotate(0deg);
+  }
+  50% {
+   transform: rotate(-40deg);
+  }
+  100% {
+   transform: rotate(0deg);
+  }
+}
+
+
+@keyframes jump {
+  
+  0% {
+   transform: translateY(0vh) rotate(0deg);
+  }
+  50% {
+   transform: translateY(-10vh) rotate(-30deg);
+  }
+  100% {
+   transform: translateY(0vh) rotate(0deg);
+  }
+}
+
+@keyframes run {
+  
+  0% {
+   left: 10%;
+  }
+  100% {
+   left: 70%;
+  }
+}
