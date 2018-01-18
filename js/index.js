@@ -36,6 +36,7 @@ function ending (){
     minute.disabled = false;
     seconde.disabled = false;
 
+    start.disabled = false;
     restart.disabled = true;
 
     unstop.style.display = 'none';
@@ -61,6 +62,13 @@ function clearing (){
 
     goat.style.animationDuration = '3s';
     goat.style.animationIterationCount = '1';
+
+    unstop.disabled = true;
+    stop.disabled = true;
+    restart.disabled = true;
+
+    minute.value = '00';
+    seconde.value = '00';
 
     goat.classList.remove('run');
     goat.classList.add('back');
@@ -182,6 +190,8 @@ function play (){
     minute.disabled = true;
     seconde.disabled = true;
 
+    stop.disabled = false;
+    unstop.disabled = false;
     restart.disabled = false;
 
     min = parseInt(minute.value);
