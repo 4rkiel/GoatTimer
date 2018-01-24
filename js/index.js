@@ -96,7 +96,7 @@ function countor (){
 
     if (count == total){
 
-//        audio.play();
+        audio.play();
         
         clearing();
 
