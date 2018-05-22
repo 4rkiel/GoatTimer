@@ -86,6 +86,7 @@
 #path854 {
   transform-origin: 50% 5%;
   transform: rotate(0deg);
+  transform-box: fill-box;
 }
 
 .run #path854-9-0, 
